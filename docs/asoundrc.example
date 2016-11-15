@@ -1,0 +1,30 @@
+pcm.ossmix {
+    type dmix
+    ipc_key 1024
+    slave {
+    pcm "hw:0,0"
+        period_time 0
+        period_size 1024
+        buffer_size 4096
+        rate 44100
+    }
+    bindings {
+        0 0
+        1 1
+    }
+}
+
+pcm.!default {
+    type plug
+    slave.pcm "ossmix"
+}
+
+pcm.dsp0 {
+    type plug
+    slave.pcm "ossmix"
+}
+
+ctl.mixer0 {
+    type hw
+    card 0
+}

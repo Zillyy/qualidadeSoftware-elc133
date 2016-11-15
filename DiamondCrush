@@ -1,0 +1,98 @@
+#!/bin/sh
+
+# Visualizzazione messaggi di errore
+MESSAGE_BOX=""
+
+function select_message_box
+{
+    BIN=`which kdialog`
+    if [ ! -z $BIN ]; then
+        MESSAGE_BOX="$BIN --title DiamondCrush --error"
+        return
+    fi
+
+    BIN=`which zenity`
+    if [ ! -z $BIN ]; then
+        MESSAGE_BOX="$BIN --title=DiamondCrush --error --text"
+        return
+    fi
+}
+
+function msgbox
+{
+    select_message_box
+
+    if [ -z "$MESSAGE_BOX" ]; then
+        echo $1
+        return
+    fi
+
+    $MESSAGE_BOX "$1"
+}
+
+# Controlliamo se l'utente ha installato Java
+JAVA=`which java`
+
+if [ -z "$JAVA" ]; then
+    msgbox "To run Diamond Crush you must install a Java Runtime Enviroment."
+    exit
+fi
+
+# Controlliamo se la versione di java è almeno una 1.5.0
+JAVA_VERSION=`$JAVA -version 2>&1 | head -n1 | cut -f 2 -d '"' | cut -f 1 -d "_" | cut -f 2 -d '.'`
+
+if [ $JAVA_VERSION -lt 5 ]; then
+    msgbox "Your version of Java is too old. To run Diamond Crush you need at least Java 1.5.0."
+    exit
+fi
+
+# visto che ci siamo controlliamo anche se il dri è abilitato
+# se glxinfo non è installato salta il controllo
+GLXINFO=`which glxinfo`
+if [ ! -z $GLXINFO ]; then
+    DRI=`glxinfo | grep 'direct rendering' | cut -d ' ' -f 3`
+    if [ $DRI == "No" ]; then
+        msgbox "This game need direct rendering enabled. Install the latest driver for you video card and try again."
+        exit
+    fi
+fi
+
+# seleziona il path delle librerie in base al nome del file
+case $0 in
+    *64)
+        JNI_PATH="lib/linux64"
+        ;;
+    *)
+        JNI_PATH="lib/linux"
+        ;;
+esac
+
+# Controlliamo libtiff
+if [ "`ldd $JNI_PATH/*.so | grep 'not found' | grep 'libtiff.so.3'`" != "" ]; then
+    msgbox "Your system does not have libtiff.so.3. Look inside Readme.txt to know how to solve this problem."
+    exit
+fi
+
+# Finché non abbiamo un .deb in cui specificare le dipendeze megli controllare
+# se mancano anche altre librerie
+LDD_RES=`ldd $JNI_PATH/*.so | grep 'not found' | grep -v 'IL' | grep -v 'jawt' | grep -v 'tiff'`
+if [ "$LDD_RES" != "" ]; then
+    MISSING_LIBS=`echo $LDD_RES | sed 's/ => not found//g;s/\t//g;s/\n/  /g'`
+    msgbox "Diamond crush need this libraries to run. Please install them and then try again.
+Missing libraries: $MISSING_LIBS"
+    exit
+fi
+
+# ok. Java c'è ed è recente quindi procediamo con l'esecuzione del gioco
+DIAMOND_JAR="DiamondCrush.jar"
+CLASSPATH="lib/jar/lwjgl_devil.jar"
+CLASSPATH="$CLASSPATH:lib/jar/lwjgl.jar"
+CLASSPATH="$CLASSPATH:lib/jar/lwjgl_util.jar"
+CLASSPATH="$CLASSPATH:lib/jar/jogg-0.0.7.jar"
+CLASSPATH="$CLASSPATH:lib/jar/jorbis-0.0.15.jar"
+CLASSPATH="$CLASSPATH:lib/jar/trb.jar"
+
+export CLASSPATH
+
+# Tutto è pronto. facciamo partire il gioco
+$JAVA -Djava.library.path=$JNI_PATH -jar $DIAMOND_JAR

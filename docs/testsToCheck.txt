@@ -1,0 +1,617 @@
+class TestEventHandler
+{
+    // Più di 10 righe di codice
+    {
+        public void testRepeatitionActivatedAndHandlerExecutedOnInputReaction()
+        public void testRepeatitionDisactivatedOnEventReleased()
+    }
+    
+    // Troppo complicato
+    {
+        public void testRepeatitionOnTimeDelay()
+        public void testRepeatitionActivatedAndHandlerExecutedOnInputReaction()
+        public void testRepeatitionDisactivatedOnEventReleased()
+    }
+}
+
+
+class TestTiledSprite
+{
+    // Troppo complicato
+    {
+        public void testNumberOfQuadsDrawnAsCellDimensionsChange()
+        public void testTilesDrawInCells()
+    }
+}
+
+
+class TestBigGem
+{
+    // Troppo Complicato
+    {
+        public void testGetIncludedGems()
+    }
+}
+
+
+
+class TestBigGemDrawing
+{
+    // Più di 10 righe di codice
+    {
+        public void testGridDrawsBigGem()
+    }
+}
+    
+
+	
+class TestBigGemInGrid
+{
+    // Più di 10 righe di codice
+    {
+		public void testGridIsUpdatedWithBigGems() throws IOException
+		public void testBigGemMoveDownABit()
+		public void testSixPerSixBug()
+    }
+	
+	// Troppo complicato
+	{
+		public void testGridIsUpdatedWithBigGems() throws IOException
+		public void testBigGemMoveDownABit()
+		public void testSixPerSixBug()
+	}
+}
+
+
+
+class TestGem
+{
+	// Troppo complicato
+	{
+		public void testGemIsDrawnCorrectly()
+	}
+}
+
+
+
+class TestGem
+{
+    // Più di 10 righe di codice
+    {
+        public void testGemIsDrawnCorrectly()
+        public void testGemViewSize()
+    }
+	
+	// Troppo complicato
+	{
+        public void testGemIsDrawnCorrectly()
+        public void testGemViewSize()
+    }
+}
+
+
+
+class TestGemAnimation
+{
+	// Più di 10 righe di codice
+	{
+		public void testDrawTwoFrames()
+        public void testBrightFramesWithAnimation()
+    }
+	
+	// Troppo complicato
+	{
+		public void testDrawTwoFrames()
+        public void testBrightFramesWithAnimation()
+    }
+}
+
+
+
+class TestGemCrushing
+{
+    // Più di 10 righe di codice
+    {
+        public void testCrushOnTopBound()
+        public void testCrushesCounters()
+        public void testCrushBeforeTimeIntervalElapsed()
+        public void testFallingTimeNotCountedInDelayBetweenCrushes()
+        public void testCrushAfterTimeIntervalElapsed()
+        public void testCrushesDelay()
+    }
+	
+	// Troppo complicato
+	{
+		public void testCrushesCounters()
+		public void testCrushesDelay()
+	}
+}
+
+
+
+class TestGemFactory
+{
+    // Più di 10 righe di codice
+    {
+        public void testGemCreation()
+        public void testChestCreation()
+    }
+}
+
+
+
+class TestGemFalling
+{
+    // Più di 10 righe di codice
+    {
+        public void testTwoGemFalling()
+        public void testBigGemNotFalling()
+        public void testBigGemFallingFromHigher()
+        public void testBigGemNotFallingForLeftObstacle()
+        public void testBigGemNotFallingFromHigher()
+    }
+	
+	// Troppo complicato
+	{
+		public void testGemFallingFromHigher()
+		public void testBigGemFallingFromHigher()
+		public void testGemFallingFromVeryHigher()
+		public void testBigGemNotFallingFromHigher()
+	}
+}
+
+
+
+class TestGemFallingWithGravity
+{
+    // Più di 10 righe di codice
+    {
+        public void testBigGemFallingWithGravity()
+        public void testBigGemFallingFromHigherWithGravity()
+        public void testGemFallingWithGravityToGridBottom()
+        public void testGemFallingWithGravityFromHigherToGridBottom()
+        public void testBigGemFallingWithGravityToGridBottom()
+        public void testBigGemNotCreateWhileFall()
+        public void testDroppedGemCanMoveDown()
+    }
+	
+	// Troppo complicato
+	{
+		public void testGemFallingWithGravity()
+		public void testBigGemFallingWithGravity()
+		public void testBigGemFallingFromHigherWithGravity()
+		public void testGemFallingWithGravityToGridBottom()
+		public void testGemFallingWithGravityFromHigherToGridBottom()
+		public void testBigGemFallingWithGravityToGridBottom()
+	}
+}
+
+
+
+class TestGemFlashing
+{
+    // Più di 10 righe di codice
+    {
+        public void testFlashDeleteOrderDown()
+        public void testFlashDeleteOrderSx()
+        public void testFlashNotDeleteNothing()
+        public void testFlashGemStartOnBigGem()
+        public void testFlashGemDeleteBigGem()
+    }
+}
+
+
+
+class TestGemsPair
+{
+    // Più di 10 righe di codice
+    {
+        public void testInsertionOnFullColumn()
+        public void testGemsPairDoesntSplitOnCommands()
+        public void testSlaveGemFallsFaster()
+    }
+    
+    // Contiene if
+    {
+        public void testInsertionOnFullColumn()
+    }
+	
+	// Troppo complicato
+	{
+		public void testInsertionOnFullColumn()
+		public void testGemsPairDoesntSplitOnCommands()
+		public void testSlaveGemFallsFaster()
+	}
+}
+
+
+
+class TestPattern
+{
+    // Più di 10 righe di codice
+    {
+        public void testDefaultPatternValues()
+    }
+}
+
+
+
+class TestRandomGemFactory
+{
+    // Più di 10 righe di codice
+    {
+        public void testRandomGemSequence()
+        public void testRandomChestSequence()
+        public void testCorrectGemAndChestAndFlashProportion()
+    }
+}
+
+
+
+class TestStoneUpdate
+{
+    // Più di 10 righe di codice
+    {
+        public void testStoneIncrementOnInsertGemsPair()
+        public void testStoneNotIncrementAfterCrush()
+        public void testStoneIncrementTiming()
+    }
+	
+	// Troppo complicato
+	{
+		public void testStoneNotIncrementAfterCrush()
+		public void testStoneIncrementTiming()
+	}
+}
+
+
+
+class TestCrushState
+{
+    // Più di 10 righe di codice
+    {
+        public void testCrushStateCostructorWithReturnState()
+    }
+    
+    // Troppo complicato
+    {
+        public void testCrushAndDroppedGemCantMoveReturnState()
+        public void testCrushStateCostructorWithReturnState()
+    }
+}
+
+
+
+class TestGemFallState
+{
+    // Più di 10 righe di codice
+    {
+        public void testDontReactToDownKeyDuringGemFallState()
+        public void testGemsPairDontFallDown()
+    }
+    
+    // Troppo complicato
+    {
+        public void testDontReactToDownKeyDuringGemFallState()
+        public void testGemsPairDontFallDown()
+        public void testGemsPairCanFallButNotReturnGemFallState()
+    }
+}
+
+
+
+class TestGemsPairOnControllState
+{
+    // Più di 10 righe di codice
+    {
+        public void setUp() throws IOException
+    }
+    
+    // Troppo complicato
+    {
+        public void testBothGemsAreNotFalling()
+    }
+}
+
+
+
+class TestStoneFallState
+{
+    // Più di 10 righe di codice
+    {
+        public void testStoneInsertionNotInSecondAndFourthColumn()
+    }
+    
+    // Contiene if
+    {
+        private boolean isFirstRowFreeForFalling(GridController controller)
+    }
+    
+    // Troppo complicato
+    {
+        public void testSameStateWhenOneOfTwoStonesDrops()
+        public void testMoreThanEightStoneInsertion()
+        public void testMoreThanEightStoneColor()
+        public void testStoneInsertionIfGemsPresent()
+        public void testMoreThanEightStoneInsertionIfStonesPresent()
+        public void testStoneFallFaster()
+        public void testStoneFrameInThirdSegment()
+        public void testStoneFrameIfFalling()
+        public void testStoneInsertionNotInSecondAndFourthColumn()
+        public void testPassToGameOverState()
+    }
+}
+
+
+
+class TestWaitNextCrushState
+{
+    // Troppo complicato
+    {
+        public void testInitState()
+    }
+}
+
+
+
+class TestWaitStateBeforeNewGemsPair
+{
+    // Più di 10 righe di codice
+    {
+        public void testInitState2()
+    }
+    
+    // Troppo complicato
+    {
+        public void testInitState()
+        public void testInitState2()
+        public void testPassToGameOverState()
+    }
+}
+
+
+   
+class TestGrid
+{
+    // Più di 10 righe di codice
+    {
+        public void testDroppedBigGemCanMove()
+    }
+}
+
+
+
+class TestGridController
+{
+    // Più di 10 righe di codice
+    {
+        public void setUp() throws IOException
+        public void testAfterSecondDelay()
+        public void testInputWhileWaiting()
+        public void testIsNotGameOverOnSingleGemCrush()
+        public void testNotGameOverInCrushState()
+        public void testInputStateSavedWhileWaiting()
+        public void testUpdateFallsWithOutGemsPair()
+    }
+    
+    // Troppo complicato
+    {
+        public void testAfterSecondDelay()
+        public void testIsNotGameOverOnSingleGemCrush()
+        public void testNotGameOverInCrushState()
+        public void testInputStateSavedWhileWaiting()
+        public void testCreate() throws IOException
+    }
+}
+
+
+
+class TestGemsPairMirroring
+{
+    // Più di 10 righe di codice
+    {
+        public void testCanMirrorSlaveGem()
+    }
+}
+
+
+
+class MockAudio
+{
+    // Contiene if
+    {
+        public Sound createSound(String name)
+    }
+}
+
+
+
+class MockEngine
+{
+    // Contiene if
+    {
+        public int getImageDrawOrder(Image image)
+    }
+    
+    // Troppo complicato
+    {
+        public void clearDisplay()
+        public int getImageDrawOrder(Image image)
+    }
+}
+
+
+
+class MockImage
+{
+    // Contiene if
+    {
+        private void loadTextureFromFile(String fileName) throws RuntimeException
+    }
+    
+    // Troppo complicato
+    {
+        private void loadTextureFromFile(String fileName) throws RuntimeException
+    }
+}
+
+
+
+class AbstractGemsPairTestCase
+{
+    // Più di 10 righe di codice
+    {
+        public void setUp() throws IOException
+    }
+}
+
+
+
+class AbstractGridTestCase
+{
+    // Più di 10 righe di codice
+    {
+        protected int getNumberOfExtensibleObject()
+    }
+    
+    // Contiene if
+    {
+        protected int getNumberOfExtensibleObject()
+    }
+    
+    // Troppo complicato
+    {
+        protected int getNumberOfExtensibleObject()
+    }
+}
+
+
+
+class TestCellsideCollision
+{
+    // Più di 10 righe di codice
+    {
+        public void setUp() throws IOException
+    }
+    
+    // Troppo complicato
+    {
+        public void testGridGravity()
+        public void testReactToInput()
+        public void testHorizontalMove()
+        public void testBottomCollision()
+    }
+}
+
+
+
+class TestCrushBox
+{
+    // Più di 10 righe di codice
+    {
+        public void testCrushBoxCounterAfterTwoCrushes()
+        public void testCrushBoxCounterPositionAfterTwoCrushes()
+        public void testCrushBoxCounterAfterThreeCrushes()
+        private void crushBoxMoveInit()
+    }
+    
+    // Troppo complicato
+    {
+        private void crushBoxMoveInit()
+        public void testOffScreenCrushBoxIsNotMoving()
+    }
+}
+
+
+
+class TestGameLoop
+{
+    // Più di 10 righe di codice
+    {
+        public void testSelectVersusModeMenuItem() throws IOException
+        public void testSelectQuitMenuItem()
+    }
+}
+
+
+
+class TestGameRestartOnGameOver
+{
+    // Più di 10 righe di codice
+    {
+        public void setUp() throws IOException
+        public void testPassToGameOverState() throws IOException
+        public void testNotMoveRightOnRestartWaitState() throws IOException
+        public void testControllerDontReactForKeyPressedOnDelay()
+    }
+    
+    // Troppo complicato
+    {
+        public void testPassToGameOverState() throws IOException
+        public void testNotMoveRightOnRestartWaitState() throws IOException
+        public void testControllerDontReactForKeyPressedOnDelay()
+    }
+}
+
+
+
+class TestGridReactionToInput
+{
+    // Più di 10 righe di codice
+    {
+        public void setUp() throws IOException
+        public void testRepeatDelayUpdateOnKeyRelease()
+    }
+    
+    // Contiene if
+    {
+        private void setUpRightAndLeftMovementTests()
+    }
+}
+
+
+
+class TestIncomingStones
+{
+    // Più di 10 righe di codice
+    {
+        public void testCounterBoxIsDrawn()
+        public void testCounterBoxShowsIfIncomingStonesDecrease()
+        public void testWarningBoxNotShowsIfIncomingStonesDecrease()
+        public void testPatternDoesNotChange()
+    }
+    
+    // Contiene if
+    {
+        public void testPatternDoesNotChange()
+    }
+    
+    // Troppo complicato
+    {
+        public void testCounterBoxIsDrawn()
+        public void testPatternDoesNotChange()
+    }
+}
+
+
+
+class TestNextGemsPanel
+{
+    // Più di 10 righe di codice
+    {
+        public void testDrawTwoGemPositionAndTexture()
+    }
+}
+
+
+
+class TestPlayField
+{
+    // Più di 10 righe di codice
+    {
+        public void testDoubleInputReactionOnTwoTimingElapsed()
+        public void testScoreChange()
+        public void testTimeStampsResetOnInputReaction()
+    }
+}
+
