@@ -1,0 +1,24 @@
+OS: Windows 7
+Version: 6.1
+Architecture: x86
+
+VM Vendor: Oracle Corporation
+Version: 1.8.0_112
+
+Class Path: C:\Users\Zilly\AppData\Roaming\NetBeans\8.0.2\modules\ext\junit-4.10.jar;D:\Google Drive\facul\semestre_05\qualidade\github\diamondCrushRun\src\lib\jar\jogg-0.0.7.jar;D:\Google Drive\facul\semestre_05\qualidade\github\diamondCrushRun\src\lib\jar\jorbis-0.0.15.jar;D:\Google Drive\facul\semestre_05\qualidade\github\diamondCrushRun\src\lib\jar\lwjgl.jar;D:\Google Drive\facul\semestre_05\qualidade\github\diamondCrushRun\src\lib\jar\lwjgl_devil.jar;D:\Google Drive\facul\semestre_05\qualidade\github\diamondCrushRun\src\lib\jar\lwjgl_util.jar;D:\Google Drive\facul\semestre_05\qualidade\github\diamondCrushRun\src\lib\jar\trb.jar;D:\Google Drive\facul\semestre_05\qualidade\github\diamondCrushRun\build\classes
+JNI Library Path: D:\Google Drive\facul\semestre_05\qualidade\github\diamondCrushRun\src\lib\win32
+
+Exception: class java.lang.RuntimeException
+Message: The file containing the configuration does not exists
+Display Adapter Driver: RDPDD null
+
+Stacktrace:
+java.lang.RuntimeException: The file containing the configuration does not exists
+	at it.diamonds.engine.Config.<init>(Config.java:25)
+	at it.diamonds.engine.Config.create(Config.java:44)
+	at it.diamonds.engine.Environment.<init>(Environment.java:45)
+	at it.diamonds.engine.Environment.create(Environment.java:52)
+	at it.diamonds.Game.setUp(Game.java:52)
+	at it.diamonds.Game.create(Game.java:36)
+	at it.diamonds.Game.main(Game.java:60)
+
