@@ -16,52 +16,45 @@ public class GemTest {
     private MockEngine engine;
     private Droppable gem;
     
-    public GemTest() {
-    }
-    
-    private Droppable createGem() {
-        return Gem.createForTesting(new MockEngine(800, 600));
-    }
-    
     @Before
     public void setUp() {
         engine = new MockEngine(800, 600);
-        gem = createGem();
+        gem = Gem.createForTesting(engine);
     }
     
+    /**
+     * Testa se a gema é desenhada corretamente.
+     */
     @Test
-    public void testGemIsDrawnCorrectly() {
+    public void testNormalGemIsDrawnCorrectly() {
+        System.out.println("* GemTest: - testNormalGemIsDrawnCorrectly()");
+        
         gem.getSprite().useNormalImage();
 
         gem.getSprite().draw(engine);
-
-        assertEquals("Gem must be drawn with unbrightened texture(bad left)",
+        
+        assertEquals("Gema deve ser desenhada com textura sem brilho (bad left)",
             engine.getImageRect().left(), 0);
 
-        assertEquals("Gem must be drawn with unbrightened texture(bad right)",
+        assertEquals("Gema deve ser desenhada com textura sem brilho (bad right)",
             engine.getImageRect().right(), 31);
-
-        gem.getSprite().useBrighterImage();
-
-        gem.getAnimatedObject().update(MockTimer.create().getTime());
-        gem.getSprite().draw(engine);
-
-        assertEquals("Gem must be drawn with brightened texture(bad left)",
-            engine.getImageRect().left(), 32);
-
-        assertEquals("Gem must be drawn with brightened texture(bad right)",
-            engine.getImageRect().right(), 63);
     }
 
+    /**
+     * Testa o view size da gema.
+     */
     @Test
     public void testGemViewSize() {
+        System.out.println("* GemTest: - testGemViewSize()");
+        
         gem.getSprite().draw(engine);
+        
         assertEquals(
-            "Height of the texture engine differente of height of gem(init)",
+            "Altura da textura da engine diferente da altura da gema (inicial)",
             engine.getImageRect().getHeight(),
             (int)gem.getSprite().getTextureArea().getHeight());
         assertEquals(
-            "Width of the texture engine differente of width of gem(init)",
+            "Largura da textura da engine diferente da largura da gema (inicial)",
             engine.getImageRect().getWidth(),
             (int)gem.getSprite().getTextureArea().getWidth());
     }
