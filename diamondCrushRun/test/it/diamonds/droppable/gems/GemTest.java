@@ -2,7 +2,6 @@ package it.diamonds.droppable.gems;
 
 import it.diamonds.droppable.Droppable;
 import it.diamonds.tests.mocks.MockEngine;
-import it.diamonds.tests.mocks.MockTimer;
 import static junit.framework.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
