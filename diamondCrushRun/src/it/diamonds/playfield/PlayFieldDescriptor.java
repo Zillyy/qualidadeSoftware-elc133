@@ -5,7 +5,7 @@ import it.diamonds.engine.Environment;
 import it.diamonds.engine.Point;
 
 
-/* TODO: questa classe non è testata */
+/* TODO: questa classe non  testata */
 
 public final class PlayFieldDescriptor
 {

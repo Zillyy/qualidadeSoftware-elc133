@@ -103,7 +103,7 @@ public class TestCrushState extends AbstractGridTestCase
 
         /*
          * TODO manca test passaggio a stoneFallState(refactoring needed) stato
-         * successivo: StoneFallState.update, cioè WaitBeforeNewGemsPairState
+         * successivo: StoneFallState.update, cio WaitBeforeNewGemsPairState
          */
         assertFalse("not correct state returned",
             state.isCurrentState("GemFall"));

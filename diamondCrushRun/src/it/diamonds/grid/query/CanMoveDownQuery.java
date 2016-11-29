@@ -7,7 +7,7 @@ import it.diamonds.droppable.pair.DroppablesPair;
 import it.diamonds.grid.Grid;
 
 
-/* TODO: questa classe è testata troppo indirettamente: creare un test case apposito. */
+/* TODO: questa classe  testata troppo indirettamente: creare un test case apposito. */
 
 public class CanMoveDownQuery extends AbstractQuery
 {
