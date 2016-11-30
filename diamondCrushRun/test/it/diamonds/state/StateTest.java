@@ -18,13 +18,11 @@ public class StateTest extends AbstractGridTestCase{
     private AbstractControllerState state;
     
     @Before
-    public void setUp() throws IOException
-    {
+    public void setUp() throws IOException {
         super.setUp();
         state = new CrushState(environment);
        // stoneFall = new StoneFallState(environment, pattern);
         setDiamondsGemsPair(grid, controller.getGemsPair());
-        
     }
      
     /**
@@ -32,6 +30,8 @@ public class StateTest extends AbstractGridTestCase{
      */
     @Test
     public void testStateRightName(){
+        System.out.println("* StateTest: - testStateRightName()");
+        
         assertTrue(state.isCurrentState("Crush"));
     }
     
@@ -40,17 +40,20 @@ public class StateTest extends AbstractGridTestCase{
      */
     @Test
     public void testIfDroppedGemCanMove(){
+        System.out.println("* StateTest: - testIfDroppedGemCanMove()");
+        
         insertAndUpdate(createGem(DIAMOND), 5, 1);
         state = state.update(environment.getTimer().getTime(), controller);
-        assertTrue("not correct state returned", state.isCurrentState("GemFall"));
+        assertTrue("Estado correto não retornado", state.isCurrentState("GemFall"));
     }
     
     /**
      * Testa gemas dropadas.
      */
     @Test
-    public void testCrushAndDroppedGemCanMoveReturnState()
-    {
+    public void testCrushAndDroppedGemCanMoveReturnState() {
+        System.out.println("* StateTest: - testStateRightName()");
+        
         //Insere novas gemas
         insertAndUpdate(createGem(DIAMOND), 13, 1);
         insertAndUpdate(createChest(DIAMOND), 12, 1);
@@ -60,7 +63,7 @@ public class StateTest extends AbstractGridTestCase{
         makeAllGemsFall();
         state = state.update(environment.getTimer().getTime(), controller);
 
-        assertTrue("not correct state returned", state.isCurrentState("GemFall"));
+        assertTrue("Estado correto não retornado", state.isCurrentState("GemFall"));
     }
     
     
@@ -68,8 +71,9 @@ public class StateTest extends AbstractGridTestCase{
      * Testa se o nome do estado atual está correto. (Propositalmente incorreto)
      */
     @Test
-    public void testStateWrongName()
-    {
+    public void testStateWrongName() {
+        System.out.println("* StateTest: - testStateWrongName()");
+        
         assertTrue(state.isCurrentState("bilada"));
     }
 }
