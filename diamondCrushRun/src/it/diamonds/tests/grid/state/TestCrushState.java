@@ -27,27 +27,6 @@ public class TestCrushState extends AbstractGridTestCase
     }
 
 
-    public void testCurrentStateWrongName()
-    {
-        assertFalse(state.isCurrentState("asdasdasd"));
-    }
-
-
-    public void testCurrentStateRightName()
-    {
-        assertTrue(state.isCurrentState("Crush"));
-    }
-
-
-    public void testDroppedGemCanMove()
-    {
-        insertAndUpdate(createGem(DIAMOND), 5, 1);
-        state = state.update(environment.getTimer().getTime(), controller);
-        assertTrue("not correct state returned",
-            state.isCurrentState("GemFall"));
-    }
-
-
     public void testCrushAndDroppedGemCanMove()
     {
         insertAndUpdate(createGem(DIAMOND), 13, 1);
@@ -76,20 +55,6 @@ public class TestCrushState extends AbstractGridTestCase
 
         assertEquals("grid chain not closed", gem.getScore(),
             grid.getScoreCalculator().getScore());
-    }
-
-
-    public void testCrushAndDroppedGemCanMoveReturnState()
-    {
-        insertAndUpdate(createGem(DIAMOND), 13, 1);
-        insertAndUpdate(createChest(DIAMOND), 12, 1);
-        insertAndUpdate(createChest(EMERALD), 11, 1);
-
-        makeAllGemsFall();
-        state = state.update(environment.getTimer().getTime(), controller);
-
-        assertTrue("not correct state returned",
-            state.isCurrentState("GemFall"));
     }
 
 
