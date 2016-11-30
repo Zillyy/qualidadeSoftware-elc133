@@ -7,7 +7,7 @@ Projeto desenvolvido para a disciplina de Qualidade de Software ELC133 - 2016/2.
 As instruções a seguir irão ajudar a rodar o jogo em seu computador.
 *Obs: Para rodar os TESTES, não é necessário fazer estas configurações.
 
-### Pré-requesitos para **rodar o jogo na sua máquina**
+### Pré-requisitos para **rodar o jogo na sua máquina**
 
 * Mudar o JDK para a versão 32 bits. 
 
