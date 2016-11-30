@@ -1,30 +1,51 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package it.diamonds.engine;
 
-import org.junit.Before;
+import static junit.framework.Assert.assertEquals;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
  *
  * @author Zilly
  */
 public class RectangleTest {
-    
-    public RectangleTest() {
+        
+    /**
+     * Testa se o construtor seta os valores corretos.
+     */
+    @Test
+    public void testRectangleConstructor() {
+        System.out.println("* RectangleTest: - testRectangleConstructor()");
+        
+        Rectangle rectangle = new Rectangle(20, 30, 40, 50);
+        
+        assertEquals(20, rectangle.left());
+        assertEquals(30, rectangle.top());
+        assertEquals(40, rectangle.right());
+        assertEquals(50, rectangle.bottom());
     }
     
-    @Before
-    public void setUp() {
+    /**
+     * Testa se a largura retornada está correta.
+     */
+    @Test
+    public void testRectangleWidth() {
+        System.out.println("* RectangleTest: - testRectangleWidth()");
+        
+        Rectangle rectangle = new Rectangle(20, 35, 40, 55);
+        
+        assertEquals(21, rectangle.getWidth());
     }
-
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
+    
+    /**
+     * Testa se a altura retornada está correta.
+     */
+    @Test
+    public void testRectangleHeight() {
+        System.out.println("* RectangleTest: - testRectangleHeight()");
+        
+        Rectangle rectangle = new Rectangle(20, 40, 40, 57);
+        
+        assertEquals(18, rectangle.getHeight());
+    }
+    
 }
