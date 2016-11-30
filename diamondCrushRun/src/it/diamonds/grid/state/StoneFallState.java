@@ -1,5 +1,4 @@
-package it.diamonds.grid.state;
-
+    package it.diamonds.grid.state;
 
 import it.diamonds.droppable.Droppable;
 import it.diamonds.droppable.DroppableFactory;
@@ -196,7 +195,7 @@ public class StoneFallState extends AbstractControllerState
     }
 
 
-    private boolean areAllDropped(DroppableList stones)
+    public boolean areAllDropped(DroppableList stones)
     {
         boolean result = true;
         for(Droppable stone : stones)
